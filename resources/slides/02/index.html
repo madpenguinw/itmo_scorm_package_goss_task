@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Сравнение асинхронности на Python и JavaScript</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body>
+  <div class="mb-40">
+    <h1 class="mb-30">Определение асинхронности</h1>
+    <div class="mb-20">
+      <p>
+        Асинхронность в программировании относится к способу выполнения задач, при котором операции не блокируют поток
+        исполнения, позволяя программе продолжать работу, не дожидаясь завершения определенных операций.
+      </p>
+    </div>
+    <div class="mb-20">
+      <h3>Зачем нужна асинхронность в программировании</h3>
+      <p>
+        Асинхронность играет ключевую роль в создании отзывчивых и эффективных программных систем. Позволяя одновременно
+        обрабатывать несколько задач, она повышает производительность и отзывчивость приложений, особенно при выполнении
+        операций ввода-вывода или сетевых запросов.
+      </p>
+    </div>
+    <div class="mb-20">
+      <h3>Сравнение синхронного и асинхронного программирования</h3>
+      <p>
+        В синхронном программировании операции выполняются последовательно: каждая задача ожидает завершения предыдущей
+        перед началом своего выполнения. В отличие от этого, асинхронное программирование позволяет продолжать
+        выполнение других задач во время ожидания завершения определенной операции, что делает систему более отзывчивой
+        и эффективно
+      </p>
+    </div>
+  </div>
+
+  <div class="flex justify-center">
+    <button type="button" class="button button-primary"
+      onclick="window.parent.postMessage({ 'message': 'next' }, '*')">Далее</button>
+  </div>
+</body>
+
+</html>

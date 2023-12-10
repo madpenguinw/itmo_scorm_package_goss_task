@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Сравнение асинхронности на Python и JavaScript</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body>
+  <div class="mb-40">
+    <h1 class="mb-30">Асинхронность в Python</h1>
+    <div class="mb-20">
+      <h3>
+        Ключевые инструменты для асинхронного программирования в Python <code>(asyncio, async/await)</code>
+      </h3>
+      <p>
+        Python предоставляет эффективные инструменты для асинхронного программирования, такие как библиотека <code>asyncio</code> и
+        ключевые слова <code>async/await</code>. Библиотека <code>asyncio</code> предоставляет инфраструктуру для написания асинхронного кода,
+        включая планировщик задач, асинхронные функции и средства управления событиями. Ключевые слова <code>async/await</code>
+        используются для определения корутин, позволяя писать более чистый и понятный асинхронный код.
+      </p>
+    </div>
+    <div class="mb-20">
+      <h3>
+        Примеры использования асинхронности в Python (чтение/запись файлов, сетевые операции)
+      </h3>
+      <p>
+        Асинхронность в Python применяется в различных сферах. Например, при работе с файлами, асинхронные операции
+        чтения и записи позволяют эффективно обрабатывать большие объемы данных без блокировки основного потока
+        выполнения. Также, при выполнении сетевых операций, асинхронность позволяет одновременно обрабатывать множество
+        запросов без ожидания завершения каждого запроса перед выполнением следующего.
+      </p>
+    </div>
+  </div>
+
+  <div class="flex justify-center">
+    <button type="button" class="button button-primary"
+      onclick="window.parent.postMessage({ 'message': 'next' }, '*')">Далее</button>
+  </div>
+</body>
+
+</html>

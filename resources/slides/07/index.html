@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Сравнение асинхронности на Python и JavaScript</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body>
+  <div class="mb-40">
+    <h1 class="mb-20">Тестирование</h1>
+
+    <form id="questions_form">
+      <div class="input-group mb-20">
+        <p class="text-16 mb-10">Как выполняются ассинхронные задачи в программировании?</p>
+
+        <div>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_1" name="q1" required>
+            <span class="label-body">Последовательно</span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_1" name="q1" required>
+            <span class="label-body">Параллельно</span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_1" name="q1" required>
+            <span class="label-body">В неопределенном порядке</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="input-group mb-20">
+        <p class="text-16 mb-10">Какой из инструментов используется для асинхронного программирования в Python?</p>
+
+        <div>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_2" name="q2" required>
+            <span class="label-body">Callbacks</span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_2" name="q2" required>
+            <span class="label-body">asyncio</span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_2" name="q2" required>
+            <span class="label-body">setTimeout</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="input-group mb-20">
+        <p class="text-16 mb-10">Что представляет собой Event Loop в JavaScript?</p>
+
+        <div>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_3" name="q3" required>
+            <span class="label-body">Механизм для асинхронной обработки событий</span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_3" name="q3" required>
+            <span class="label-body">Специфический цикл в цикле исполнения программы</span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_3" name="q3" required>
+            <span class="label-body">Обратный вызов после завершения операции</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="input-group mb-20">
+        <p class="text-16 mb-10">В чем польза ассинхронного подхода в программировании?</p>
+
+        <div>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_4" name="q4" required>
+            <span class="label-body">Упрощение разработки и отладки</span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_4" name="q4" required>
+            <span class="label-body">Уменьшение времени выполнения I/O задач</span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_4" name="q4" required>
+            <span class="label-body">Отсутствие необходимости в callback'ах</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="input-group mb-20">
+        <p class="text-16 mb-10">Какие основные механизмы асинхронности есть в JavaScript?</p>
+
+        <div>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_5" name="q5" required>
+            <span class="label-body">Callbacks, Events, Threads</span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_5" name="q5" required>
+            <span class="label-body">Promises, Async/Await, Event Loop</span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_5" name="q5" required>
+            <span class="label-body">setTimeout, setInterval, requestAnimationFrame</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="input-group mb-20">
+        <p class="text-16 mb-10">Какие недостатки может иметь асинхронное программирование?</p>
+
+        <div>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_6" name="q6" required>
+            <span class="label-body">Потеря данных</span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_6" name="q6" required>
+            <span class="label-body">Увеличение производительности</span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_6" name="q6" required>
+            <span class="label-body">Сложности с отладкой и состоянием</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="input-group mb-20">
+        <p class="text-16 mb-10">В чем разница между синхронным и асинхронным программированием?</p>
+
+        <div>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_7" name="q7" required>
+            <span class="label-body">Синхронное - последовательное выполнение, асинхронное - параллельное</span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_7" name="q7" required>
+            <span class="label-body">Синхронное - одновременное выполнение, асинхронное - последовательное</span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_7" name="q7" required>
+            <span class="label-body">Синхронное - блокирующее выполнение, асинхронное - не блокирующее</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="input-group mb-20">
+        <p class="text-16 mb-10">Какие ключевые слова используются для работы с асинхронным кодом в Python?</p>
+
+        <div>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_8" name="q8" required>
+            <span class="label-body">start/stop</span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_8" name="q8" required>
+            <span class="label-body">async/await</span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_8" name="q8" required>
+            <span class="label-body">start/wait</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="input-group mb-20">
+        <p class="text-16 mb-10">Какой механизм используется для обработки асинхронных операций в JavaScript?</p>
+
+        <div>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_9" name="q9" required>
+            <span class="label-body">Async Manager
+            </span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_9" name="q9" required>
+            <span class="label-body">Event Queue
+            </span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_9" name="q9" required>
+            <span class="label-body">Event Loop</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="input-group mb-20">
+        <p class="text-16 mb-10">Что представляют собой Promises в JavaScript?</p>
+
+        <div>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_10" name="q10" required>
+            <span class="label-body">Механизм для остановки выполнения кода до завершения асинхронной операции</span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_10" name="q10" required>
+            <span class="label-body">Объекты, представляющие успешное завершение или ошибку асинхронной операции</span>
+          </label>
+          <label class="example-send-yourself-copy">
+            <input type="radio" class="question_10" name="q10" required>
+            <span class="label-body">Способ организации циклов в JavaScript</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="flex justify-center">
+        <button type="submit" type="button" class="button button-primary">Закончить</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const ANSWERS = [
+      {
+        type: 'radio',
+        input: document.querySelectorAll('.question_1'),
+        value: 3
+      },
+      {
+        type: 'radio',
+        input: document.querySelectorAll('.question_2'),
+        value: 2
+      },
+      {
+        type: 'radio',
+        input: document.querySelectorAll('.question_3'),
+        value: 1
+      },
+      {
+        type: 'radio',
+        input: document.querySelectorAll('.question_4'),
+        value: 2
+      },
+      {
+        type: 'radio',
+        input: document.querySelectorAll('.question_5'),
+        value: 2
+      },
+      {
+        type: 'radio',
+        input: document.querySelectorAll('.question_6'),
+        value: 3
+      },
+      {
+        type: 'radio',
+        input: document.querySelectorAll('.question_7'),
+        value: 3
+      },
+      {
+        type: 'radio',
+        input: document.querySelectorAll('.question_8'),
+        value: 2
+      },
+      {
+        type: 'radio',
+        input: document.querySelectorAll('.question_9'),
+        value: 3
+      },
+      {
+        type: 'radio',
+        input: document.querySelectorAll('.question_10'),
+        value: 2
+      }
+    ]
+
+    function checkFormScore() {
+      let accessed = 0
+
+      for (answer of ANSWERS) {
+        const { type, input, value } = answer
+
+        if (input) {
+          if (type === 'radio' && input[value - 1].checked) {
+            accessed += 1
+          } else if (type === 'text' && input.value.trim().toLowerCase() === value) {
+            accessed += 1
+          }
+        }
+      }
+
+      return accessed
+    }
+
+    const form = document.querySelector('#questions_form')
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      const score = checkFormScore()
+
+      window.parent.postMessage({ 'message': 'finish', 'trueAnswers': score, 'questionsCount': ANSWERS.length }, "*");
+    })
+  </script>
+</body>
+
+</html>

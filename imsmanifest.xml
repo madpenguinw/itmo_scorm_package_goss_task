@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest identifier="course_rostov"
+  version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="course_rostov_organization">
+    <organization identifier="course_rostov_organization">
+      <title>Аттестационный курс | УЭО</title>
+      <item identifier="course_rostov_slide_01"
+        identifierref="course_rostov_main_page">
+        <title>курс от Соколова Михаила</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="course_rostov_main_page"
+      type="webcontent"
+      href="index.html"
+      adlcp:scormtype="sco">
+    </resource>
+  </resources>
+</manifest>
